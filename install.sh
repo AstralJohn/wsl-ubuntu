@@ -23,16 +23,8 @@ sudo apt install -y \
   lsb-release \
   neovim \
   tmux \
+  fzf \
   zsh
-
-cp ./.zshrc ~/.zshrc
-
-echo "[*] Installing Oh My Zsh..."
-KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-
-echo "[*] Installing Powerlevel10k Theme..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#manual-install
 echo "[*] Installing NVM: Node Version Manager..."
@@ -41,3 +33,15 @@ export NVM_DIR="$HOME/.nvm" && (
   cd "$NVM_DIR"
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
+
+cp ./.zshrc ~/.zshrc
+
+echo "[*] Installing Oh My Zsh..."
+KEEP_ZSHRC=yes CHSH=yes RUNZSH=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+echo "[*] Installing Powerlevel10k Theme..."
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+echo "[*] Installing Node (LTS)..."
+nvm install --lts
