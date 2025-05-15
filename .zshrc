@@ -34,3 +34,6 @@ alias zshrc="nvim ~/.zshrc"
 alias gs="git status"
 alias ls="ls -lhF --color"
 alias lh="ls -lhd .??*"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

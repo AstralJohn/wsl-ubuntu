@@ -49,7 +49,7 @@ cp ./.zshrc ~/.zshrc
 echo "[*************************************************]"
 echo "[************ Installing Oh My Zsh... ************]"
 echo "[*************************************************]"
-KEEP_ZSHRC=yes CHSH=yes RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+KEEP_ZSHRC=yes CHSH=no RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
 echo "[*************************************************]"
@@ -57,7 +57,7 @@ echo "[******* Installing Powerlevel10k Theme... *******]"
 echo "[*************************************************]"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
-
+cp ./.p10k.zsh ~/.p10k.zsh
 
 echo "[*************************************************]"
 echo "[******* Installing Zsh Autosuggestions... *******]"
@@ -68,6 +68,8 @@ echo "[*************************************************]"
 echo "[***** Installing Zsh Syntax Highlighting... *****]"
 echo "[*************************************************]"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+chsh -s "$(command -v zsh)" "$USER"
 
 zsh
 
