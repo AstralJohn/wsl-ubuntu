@@ -3,7 +3,7 @@
 ### 2. Install & Set Your Font in Windows Terminal
 ![Windows Terminal Settings Screenshot](./markdown-assets/terminal-font.png)
 # Install Script
-### Run this in a fresh WSL Ubuntu installation
+### 3. Run this in a fresh WSL Ubuntu installation
 ```sh
 git clone https://github.com/AstralJohn/wsl-ubuntu; cd wsl-ubuntu;sudo chmod u+x ./install.sh; ./install.sh
 ```
