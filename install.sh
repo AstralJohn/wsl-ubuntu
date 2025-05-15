@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 email="john@astralpond.com"
 full_name="John Dinh"
 
@@ -48,7 +49,7 @@ export NVM_DIR="$HOME/.nvm" && (
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
 
-cp ./.zshrc ~/.zshrc
+cp "$SCRIPT_DIR/.zshrc" "$HOME/.zshrc"
 
 
 echo "[*************************************************]"
@@ -62,7 +63,7 @@ echo "[******* Installing Powerlevel10k Theme... *******]"
 echo "[*************************************************]"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
-cp ./.p10k.zsh ~/.p10k.zsh
+cp "$SCRIPT_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
 
 echo "[*************************************************]"
 echo "[******* Installing Zsh Autosuggestions... *******]"
