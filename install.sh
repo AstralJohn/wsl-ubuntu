@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-email="john@astralpond.com"
-full_name="John Dinh"
+
+read -p "Enter your full name: (Example: 'John Dinh')" FULL_NAME
+read -p "Enter your email: " EMAIL
 
 set -e
 
@@ -86,8 +87,8 @@ nvm install --lts
 echo "[*************************************************]"
 echo "[************ Setting Up Git Configs... **********]"
 echo "[*************************************************]"
-git config --global user.email "$email"
-git config --global user.name "$full_name"
+git config --global user.email "$EMAIL"
+git config --global user.name "$FULL_NAME"
 
 echo "[*************************************************]"
 echo "[************ Cloning NvChad Config... ***********]"
