@@ -90,4 +90,7 @@ echo "[************ Cloning NvChad Config... ***********]"
 echo "[*************************************************]"
 git clone git@github.com:AstralJohn/nvim.git ~/.config/nvim
 
+# Deletes the directory the install.sh lives in
+rm -rf -- "$(dirname -- "$0")"
+
 zsh -c 'nvim'
