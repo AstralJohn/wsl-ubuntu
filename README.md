@@ -1,5 +1,5 @@
 # Prerequisite
-### 1. [Download SpaceMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/SpaceMono.zip)
+### 1. [Download SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/SourceCodePro.zip)
 ### 2. Install & Set Your Font in Windows Terminal
 ![Windows Terminal Settings Screenshot](./markdown-assets/terminal-font.png)
 # Install Script
