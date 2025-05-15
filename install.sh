@@ -71,9 +71,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 chsh -s "$(command -v zsh)" "$USER"
 
-zsh
-
 echo "[*************************************************]"
 echo "[************ Installing Node (LTS)... ***********]"
 echo "[*************************************************]"
 nvm install --lts
+
+zsh
