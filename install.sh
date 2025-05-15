@@ -24,7 +24,8 @@ sudo apt install -y \
   neovim \
   tmux \
   fzf \
-  zsh
+  zsh \
+  zsh-syntax-highlighting
 
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#manual-install
 echo "[*] Installing NVM: Node Version Manager..."
@@ -42,6 +43,12 @@ KEEP_ZSHRC=yes CHSH=yes RUNZSH=yes sh -c "$(curl -fsSL https://raw.githubusercon
 
 echo "[*] Installing Powerlevel10k Theme..."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+echo "[*] Installing Zsh Autosuggestions..."
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "[*] Installing Zsh Syntax Highlighting..."
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo "[*] Installing Node (LTS)..."
 nvm install --lts
