@@ -100,9 +100,8 @@ ssh-keygen -t ed25519 -C "$email"
 
 clip.exe < ~/.ssh/id_ed25519.pub
 cmd.exe /C start https://github.com/settings/ssh/new
-cd ~
 
-# Deletes the directory the install.sh lives in
+cd ..
 rm -rf -- "$(dirname -- "$0")"
 
 zsh -c 'nvim'
