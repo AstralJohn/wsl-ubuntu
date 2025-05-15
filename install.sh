@@ -31,6 +31,8 @@ sudo apt install -y \
   tmux \
   fzf \
   zsh \
+  ripgrep \
+  luarocks \
   zsh-syntax-highlighting
 
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#manual-install
