@@ -2,14 +2,20 @@
 
 set -e
 
-echo "[*] Adding Neovim Unstable PPA..."
+echo "[*************************************************]"
+echo "[********* Adding Neovim Unstable PPA... *********]"
+echo "[*************************************************]"
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 
-echo "[*] Updating system..."
+echo "[*************************************************]"
+echo "[************** Updating System... ***************]"
+echo "[*************************************************]"
 sudo apt update
 sudo apt upgrade -y
 
-echo "[*] Installing base packages..."
+echo "[*************************************************]"
+echo "[********** Installing Base Packages... **********]"
+echo "[*************************************************]"
 sudo apt install -y \
   build-essential \
   curl \
@@ -28,7 +34,9 @@ sudo apt install -y \
   zsh-syntax-highlighting
 
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#manual-install
-echo "[*] Installing NVM: Node Version Manager..."
+echo "[*************************************************]"
+echo "[**** Installing NVM: Node Version Manager... ****]"
+echo "[*************************************************]"
 export NVM_DIR="$HOME/.nvm" && (
   git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
   cd "$NVM_DIR"
@@ -37,20 +45,33 @@ export NVM_DIR="$HOME/.nvm" && (
 
 cp ./.zshrc ~/.zshrc
 
-echo "[*] Installing Oh My Zsh..."
+
+echo "[*************************************************]"
+echo "[************ Installing Oh My Zsh... ************]"
+echo "[*************************************************]"
 KEEP_ZSHRC=yes CHSH=yes RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
-echo "[*] Installing Powerlevel10k Theme..."
+echo "[*************************************************]"
+echo "[******* Installing Powerlevel10k Theme... *******]"
+echo "[*************************************************]"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
-echo "[*] Installing Zsh Autosuggestions..."
+
+
+echo "[*************************************************]"
+echo "[******* Installing Zsh Autosuggestions... *******]"
+echo "[*************************************************]"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-echo "[*] Installing Zsh Syntax Highlighting..."
+echo "[*************************************************]"
+echo "[***** Installing Zsh Syntax Highlighting... *****]"
+echo "[*************************************************]"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 zsh
 
-echo "[*] Installing Node (LTS)..."
+echo "[*************************************************]"
+echo "[************ Installing Node (LTS)... ***********]"
+echo "[*************************************************]"
 nvm install --lts
