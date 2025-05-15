@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+email="john@astralpond.com"
+full_name="John Dinh"
+
 set -e
 
 echo "[*************************************************]"
@@ -82,8 +85,8 @@ nvm install --lts
 echo "[*************************************************]"
 echo "[************ Setting Up Git Configs... **********]"
 echo "[*************************************************]"
-git config --global user.email "john@astralpond.com"
-git config --global user.name "John Dinh"
+git config --global user.email "$email"
+git config --global user.name "$full_name"
 
 echo "[*************************************************]"
 echo "[************ Cloning NvChad Config... ***********]"
@@ -92,5 +95,13 @@ git clone git@github.com:AstralJohn/nvim.git ~/.config/nvim
 
 # Deletes the directory the install.sh lives in
 rm -rf -- "$(dirname -- "$0")"
+
+echo "[*************************************************]"
+echo "[************* Setting Up SSH Keys... ************]"
+echo "[*************************************************]"
+ssh-keygen -t ed25519 -C "$email"
+
+clip.exe < ~/.ssh/id_ed25519.pub
+cmd.exe /C start https://github.com/settings/ssh/new
 
 zsh -c 'nvim'
