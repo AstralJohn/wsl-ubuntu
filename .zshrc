@@ -37,3 +37,12 @@ alias lh="ls -lhd .??*"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Start ssh-agent if not running
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)"
+fi
+
+# Add key if not loaded
+KEY="$HOME/.ssh/id_ed25519"
+ssh-add -l | grep -q "$KEY" 2>/dev/null || ssh-add "$KEY" 2>/dev/null
