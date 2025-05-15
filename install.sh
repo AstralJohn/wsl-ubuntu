@@ -76,4 +76,7 @@ echo "[************ Installing Node (LTS)... ***********]"
 echo "[*************************************************]"
 nvm install --lts
 
+git config --global user.email "john@astralpond.com"
+git config --global user.name "John Dinh"
+
 zsh
