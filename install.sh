@@ -103,4 +103,10 @@ cmd.exe /C start https://github.com/settings/ssh/new
 
 rm -rf ~/wsl-ubuntu
 
-zsh -c 'nvim'
+echo "[***********************************************************************]"
+echo "[************ Run :MasonInstallAll after lazy.nvim completes ***********]"
+echo "[***********************************************************************]"
+echo "\n"
+echo "Press any key to launch nvim (remember to run :MasonInstallAll lazy.nvim completes!)"
+read
+nvim
