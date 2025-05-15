@@ -101,7 +101,6 @@ ssh-keygen -t ed25519 -C "$email" -f ~/.ssh/id_ed25519
 clip.exe < ~/.ssh/id_ed25519.pub
 cmd.exe /C start https://github.com/settings/ssh/new
 
-cd ..
-rm -rf -- "$(dirname -- "$0")"
+rm -rf ~/wsl-ubuntu
 
 zsh -c 'nvim'
