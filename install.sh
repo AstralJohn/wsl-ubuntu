@@ -38,6 +38,7 @@ sudo apt install -y \
   zsh \
   ripgrep \
   luarocks \
+  xclip \
   zsh-syntax-highlighting
 
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#manual-install
