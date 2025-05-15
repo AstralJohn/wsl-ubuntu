@@ -38,7 +38,7 @@ export NVM_DIR="$HOME/.nvm" && (
 cp ./.zshrc ~/.zshrc
 
 echo "[*] Installing Oh My Zsh..."
-KEEP_ZSHRC=yes CHSH=yes RUNZSH=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+KEEP_ZSHRC=yes CHSH=yes RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
 echo "[*] Installing Powerlevel10k Theme..."
@@ -49,6 +49,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 echo "[*] Installing Zsh Syntax Highlighting..."
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+zsh
 
 echo "[*] Installing Node (LTS)..."
 nvm install --lts
