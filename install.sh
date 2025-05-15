@@ -91,7 +91,7 @@ git config --global user.name "$full_name"
 echo "[*************************************************]"
 echo "[************ Cloning NvChad Config... ***********]"
 echo "[*************************************************]"
-git clone git@github.com:AstralJohn/nvim.git ~/.config/nvim
+git clone https://github.com/AstralJohn/nvim.git ~/.config/nvim
 
 # Deletes the directory the install.sh lives in
 rm -rf -- "$(dirname -- "$0")"
