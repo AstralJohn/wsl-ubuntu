@@ -39,10 +39,10 @@ alias lh="ls -lhd .??*"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Start ssh-agent if not running
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-  eval "$(ssh-agent -s)"
-fi
+#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#  eval "$(ssh-agent -s)"
+#fi
 
 # Add key if not loaded
-KEY="$HOME/.ssh/id_ed25519"
-ssh-add -l | grep -q "$KEY" 2>/dev/null || ssh-add "$KEY" 2>/dev/null
+#KEY="$HOME/.ssh/id_ed25519"
+#ssh-add -l | grep -q "$KEY" 2>/dev/null || ssh-add "$KEY" 2>/dev/null
