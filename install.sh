@@ -78,7 +78,16 @@ echo "[************ Installing Node (LTS)... ***********]"
 echo "[*************************************************]"
 nvm install --lts
 
+
+echo "[*************************************************]"
+echo "[************ Setting Up Git Configs... **********]"
+echo "[*************************************************]"
 git config --global user.email "john@astralpond.com"
 git config --global user.name "John Dinh"
 
-zsh
+echo "[*************************************************]"
+echo "[************ Cloning NvChad Config... ***********]"
+echo "[*************************************************]"
+git clone git@github.com:AstralJohn/nvim.git ~/.config/nvim
+
+zsh -c 'nvim'
