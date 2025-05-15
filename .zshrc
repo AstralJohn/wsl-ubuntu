@@ -29,7 +29,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Set preferred edito
+# Set preferred editor
 export EDITOR='nvim'
 
 export NVM_DIR="$HOME/.nvm"
@@ -41,6 +41,7 @@ alias zshrc="nvim ~/.zshrc"
 alias gs="git status"
 alias ls="ls -lhF --color"
 alias lh="ls -lhd .??*"
+alias zshrc="nvim $HOME/.zshrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

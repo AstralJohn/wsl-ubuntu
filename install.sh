@@ -108,7 +108,7 @@ echo "[***********************************************************************]"
 echo "[************ Run :MasonInstallAll after lazy.nvim completes ***********]"
 echo "[***********************************************************************]"
 echo "\n"
-echo "Press any key to launch nvim (remember to run :MasonInstallAll lazy.nvim completes!)"
+echo "Press the enter key to launch nvim (remember to run :MasonInstallAll lazy.nvim completes!) >"
 read
 nvim
 zsh
