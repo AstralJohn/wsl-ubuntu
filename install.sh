@@ -90,6 +90,7 @@ echo "[************ Setting Up Git Configs... **********]"
 echo "[*************************************************]"
 git config --global user.email "$EMAIL"
 git config --global user.name "$FULL_NAME"
+git config --global init.defaultBranch main
 
 echo "[*************************************************]"
 echo "[************ Cloning NvChad Config... ***********]"
