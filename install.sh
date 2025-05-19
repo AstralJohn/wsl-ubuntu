@@ -5,6 +5,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 read -p "Enter your full name: (Example: 'John Dinh')" FULL_NAME
 read -p "Enter your email: " EMAIL
 
+FULL_NAME="${FULL_NAME:-John Dinh}"
+EMAIL="${EMAIL:-johnduydinh@gmail.com}"
 set -e
 
 echo "[*************************************************]"
